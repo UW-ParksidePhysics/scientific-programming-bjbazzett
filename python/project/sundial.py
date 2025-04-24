@@ -5,7 +5,7 @@ set width to 3ft and use angles to set height
 mark the solstices and equinoxes with a simple sun icon
 mark the perihelion and aphelion with a simple earth icon
 
-note: 4ft/(tan24)=9ft and 4ft/(tan71)=1.4ft so the sundial is about 7.6ft tall and 3ft wide
+note: 4ft/(tan24)=9ft and 4ft/(tan71)=1.4ft so the sundial is about 7.6ft tall and 3ft wide(at widest point)
 """
 
 import numpy as np
