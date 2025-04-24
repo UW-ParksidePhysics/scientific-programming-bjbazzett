@@ -1,3 +1,6 @@
+"""
+(empty docstring)
+"""
 #### RENAME from project.py to (your_project_short_name).py
 # File structure
 # 1. Commented paragraph describing project ~ 100-200 words
