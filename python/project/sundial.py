@@ -1,8 +1,20 @@
 """
-(empty docstring)
+(feedback) Sundial
+make month start marks about 12inch horizontal away from the center line and labeled with the word of the month
+set width to 3ft and use angles to set height
+mark the solstices and equinoxes with a simple sun icon
+mark the perihelion and aphelion with a simple earth icon
 """
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
 if  __name__ == "__main__":
-    print("Hello, World!")
+  azimuths = np.linspace(0, 2*np.pi, 100)
+  alitudes = np.sin(azimuths)
+  plt.plot(azimuths, alitudes)
+  plt.show()
 
 #### RENAME from project.py to (your_project_short_name).py
 # File structure
