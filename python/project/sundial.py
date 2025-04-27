@@ -6,7 +6,8 @@ mark the solstices and equinoxes with a simple sun icon
 mark the perihelion and aphelion with a simple earth icon
 
 note: 4ft/(tan24)=9ft and 4ft/(tan71)=1.4ft so the sundial is about 7.6ft tall and 3ft wide(at widest point~)
-"""
+
+My goal in this project is to create a sundial based on the analemma of the sun's position in the sky to cast a shadow from the analemma.
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,6 +18,8 @@ if  __name__ == "__main__":
   alitudes = np.sin(azimuths)
   plt.plot(azimuths, alitudes)
   plt.show()
+"""
+
 
 #### RENAME from project.py to (your_project_short_name).py
 # File structure

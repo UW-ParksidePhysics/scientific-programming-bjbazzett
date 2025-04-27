@@ -6,6 +6,7 @@ requires-python = ">=3.12"
 dependencies = [
     "astropy==7.0.0",
     "matplotlib==3.9.3",
+    "pysolar==0.11",
     "scipy==1.14.1",
     "vpython==7.6.5",
 ]
