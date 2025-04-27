@@ -5,7 +5,7 @@ set width to 3ft and use angles to set height
 mark the solstices and equinoxes with a simple sun icon
 mark the perihelion and aphelion with a simple earth icon
 
-note: 4ft/(tan24)=9ft and 4ft/(tan71)=1.4ft so the sundial is about 7.6ft tall and 3ft wide(at widest point~)
+note: 4ft/(tan24)=9ft and 4ft/(tan71)=1.4ft so the sundial is about 7.6ft tall and 3ft wide(at widest point). There can be 9 inches or so of space for the height of the sundial past the analemma itself, then 6 inches extra for the wides part of the analemma, making the entire sundial about 10ft tall and 4ft wide.
 
 My goal in this project is to create a sundial based on the analemma of the sun's position in the sky to cast a shadow from the analemma.
 
@@ -19,7 +19,90 @@ if  __name__ == "__main__":
   plt.plot(azimuths, alitudes)
   plt.show()
 """
+import eot
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.gridspec import GridSpec
 
+e = 0.017
+orb_per = 365.25
+
+peri_day = 5
+p_degs = 14
+
+
+axis_norm_degs = 23.5
+
+day_nums = np.arange(1.5, 366.5, 1)
+
+cal_dict = {1: 'January', 3: 'Perihelion', 32: 'Febuary', 60: 'March', 76: '☀️', 91: 'April', 121: 'May',
+            152: 'June', 171: '☀️', 182: 'July', 185: 'Aphelion', 213: 'August', 244: 'September',
+            266: '☀️', 274: 'October', 305: 'November', 335: 'December', 355: '☀️'}
+
+scaling_on = False
+
+fig = plt.figure(figsize=(10, 6), num='Equation of Time')
+plt.subplots_adjust(top=.925, left=0.100, right=.950, wspace=0.1)
+gs = GridSpec(22, 20, figure=fig)
+
+day_nums = np.arange(1.5, 367.5, 1)  # base calculation on noon UT of day
+min_x, dec_y = eot.analemma_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
+ax_analemma = plt.subplot(gs.new_subplotspec((0, 12), colspan=9, rowspan=22))
+ax_analemma.set_title("Analemma")
+ax_analemma.minorticks_on()
+ax_analemma.grid(which='major', linestyle='-', linewidth=0.5, color='grey')
+ax_analemma.grid(which='minor', linestyle=':', linewidth=0.5, color='grey')
+ax_analemma.set_xlabel('Minutes')
+ax_analemma.set_ylabel('Angle')
+analemma_line, = ax_analemma.plot(min_x, dec_y, 'k', lw=2)
+analemma_ann_list = []
+
+for d, dt_lbl in cal_dict.items():
+    ann = ax_analemma.annotate(dt_lbl, (min_x[d - 1], dec_y[d - 1]), textcoords="offset points",
+                               xytext=(-30, 0), ha='right', fontsize='small', color='red',
+                               arrowprops=dict(arrowstyle="-", color='red'))
+    analemma_ann_list.append(ann)
+
+def update(val):
+    global eot_ann_list, analemma_ann_list
+
+    e = slider_e.val
+    axis_norm_degs = slide_obl_deg.val
+    p_degs = slide_sol_peri.val
+
+    day_nums = np.arange(1.5, 366.5, 1)
+    eot_x = day_nums
+    eot_y = eot.eot_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
+    obl_y = eot.obl_gen(p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
+    ecc_y = eot.ecc_gen(e, p_degs, peri_day, orb_per, day_nums)
+    eot_line.set_ydata(eot_y)
+    ecc_line.set_ydata(ecc_y)
+    obl_line.set_ydata(obl_y)
+
+    for _, a in enumerate(eot_ann_list):
+        a.remove()
+    eot_ann_list[:] = []
+    for d, dt_lbl in cal_dict.items():
+        ann = ax_eot.annotate(dt_lbl, (eot_x[d - 1], eot_y[d - 1]), textcoords="offset points",
+                              xytext=(-10, 10), ha='right', fontsize='small', color='red',
+                              arrowprops=dict(arrowstyle="->", color='red'))
+        eot_ann_list.append(ann)
+
+    day_nums = np.arange(1.5, 367.5, 1)
+    min_x, dec_y = eot.analemma_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
+    analemma_line.set_ydata(dec_y)
+    analemma_line.set_xdata(min_x)
+
+    for _, a in enumerate(analemma_ann_list):
+        a.remove()
+    analemma_ann_list[:] = []
+    for d, dt_lbl in cal_dict.items():
+        ann = ax_analemma.annotate(dt_lbl, (min_x[d - 1], dec_y[d - 1]), textcoords="offset points",
+                                   xytext=(-10, 10), ha='right', fontsize='small', color='red',
+                                   arrowprops=dict(arrowstyle="->", color='red'))
+        analemma_ann_list.append(ann)
+
+plt.show()
 
 #### RENAME from project.py to (your_project_short_name).py
 # File structure
