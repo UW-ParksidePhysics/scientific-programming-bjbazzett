@@ -66,29 +66,10 @@ for d, dt_lbl in cal_dict.items():
 def update(val):
     global eot_ann_list, analemma_ann_list
 
-    e = slider_e.val
-    axis_norm_degs = slide_obl_deg.val
-    p_degs = slide_sol_peri.val
-
     day_nums = np.arange(1.5, 366.5, 1)
-    eot_x = day_nums
-    eot_y = eot.eot_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
-    obl_y = eot.obl_gen(p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
-    ecc_y = eot.ecc_gen(e, p_degs, peri_day, orb_per, day_nums)
-    eot_line.set_ydata(eot_y)
-    ecc_line.set_ydata(ecc_y)
-    obl_line.set_ydata(obl_y)
 
-    for _, a in enumerate(eot_ann_list):
-        a.remove()
-    eot_ann_list[:] = []
-    for d, dt_lbl in cal_dict.items():
-        ann = ax_eot.annotate(dt_lbl, (eot_x[d - 1], eot_y[d - 1]), textcoords="offset points",
-                              xytext=(-10, 10), ha='right', fontsize='small', color='red',
-                              arrowprops=dict(arrowstyle="->", color='red'))
-        eot_ann_list.append(ann)
 
-    day_nums = np.arange(1.5, 367.5, 1)
+    day_nums = np.arange(0.5, 366.5, 1)
     min_x, dec_y = eot.analemma_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
     analemma_line.set_ydata(dec_y)
     analemma_line.set_xdata(min_x)
