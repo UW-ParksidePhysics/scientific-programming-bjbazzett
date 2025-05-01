@@ -25,15 +25,16 @@ def eot_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums):
   tan4_2e = 2*e*pow(tan2, 2)
   tan2_2e_13_4 = (13/4)*(pow(e, 2))*tan2
   tan6_1_3 = (1/3)*pow(tan2, 3)
+  for d in day_nums:
+    m = 2 * pi * ((d - peri_day) / orb_per)
+    eot_mins.append(-(tan2_1_4e2 * sin(2 * (m + p)) + e2 * sin(m) -
+                      tan2_2e * sin(m + 2 * p) + tan2_2e * sin(3 * m + 2 * p) +
+                      tan4_1_2 * sin(4 * (m + p)) + e2_5_4 * sin(2 * m) - tan4_2e * sin((3 * m) + (4 * p)) +
+                      tan4_2e * sin((5 * m) + (4 * p)) + tan2_2e_13_4 * sin(4 * m + 2 * p) +
+                      tan6_1_3 * sin(6 * (m + p))) * time_mins)
+  return eot_mins
 
-for d in day_nums:
-    m = 2*pi*((d - peri_day)/orb_per)
-    eot_mins.append(-(tan2_1_4e2*sin(2*(m+p))+e2*sin(m) -
-                    tan2_2e*sin(m+2*p)+tan2_2e*sin(3*m+2*p) +
-                    tan4_1_2*sin(4*(m+p))+e2_5_4*sin(2*m)-tan4_2e*sin((3*m)+(4*p)) +
-                    tan4_2e*sin((5*m)+(4*p))+tan2_2e_13_4*sin(4*m+2*p) +
-                    tan6_1_3*sin(6*(m+p)))*time_mins)
-return eot_mins
+
 
 def dec_gen(e, axis_norm_degs, orb_per, day_nums, p_degs):
   dec_degs = []
