@@ -33,7 +33,7 @@ p_degs = 14
 
 axis_norm_degs = 23.5
 
-day_nums = np.arange(1.5, 366.5, 1)
+day_nums = np.arange(1.5, 367.5, 1)
 
 cal_dict = {1: 'January', 32: 'Febuary', 60: 'March', 91: 'April', 182: 'July', 213: 'August'}
 
@@ -47,7 +47,7 @@ fig = plt.figure(figsize=(10, 6), num='Equation of Time')
 plt.subplots_adjust(top=.925, left=0.100, right=.950, wspace=0.1)
 gs = GridSpec(22, 20, figure=fig)
 
-day_nums = np.arange(1.5, 366.5, 1)
+day_nums = np.arange(1.5, 367.5, 1)
 min_x, dec_y = eot.analemma_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
 ax_analemma = plt.subplot(gs.new_subplotspec((0, 12), colspan=9, rowspan=22))
 ax_analemma.set_title("Analemma")
@@ -79,7 +79,7 @@ for d, dt_lbl in cal_dict2.items():
 def update(val):
     global eot_ann_list, analemma_ann_list
 
-    day_nums = np.arange(1.5, 366.5, 1)
+    day_nums = np.arange(1.5, 367.5, 1)
     min_x, dec_y = eot.analemma_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
     analemma_line.set_ydata(dec_y)
     analemma_line.set_xdata(min_x)
