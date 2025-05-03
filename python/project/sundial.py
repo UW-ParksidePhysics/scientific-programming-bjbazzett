@@ -37,7 +37,7 @@ day_nums = np.arange(1.5, 367.5, 1)
 
 cal_dict = {1: 'January', 32: 'Febuary', 60: 'March', 91: 'April', 182: 'July', 213: 'August'}
 
-cal_dict1 = {3: '♑︎', 76: '☀️', 171: '☀️', 185: 'O', 266: '☀️', 355: '☀️'}
+cal_dict1 = {3: '♁', 76: '♈', 171: '♊', 185: '♁', 266: '♍', 355: '♐'}
 
 cal_dict2 = {121: 'May', 152: 'June', 244: 'September', 274: 'October', 305: 'November', 335: 'December'}
 
@@ -48,7 +48,7 @@ gs = GridSpec(22, 20, figure=fig)
 
 day_nums = np.arange(1.5, 367.5, 1)
 min_x, dec_y = eot.analemma_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
-ax_analemma = plt.subplot(gs.new_subplotspec((0, 12), colspan=9, rowspan=22))
+ax_analemma = plt.subplot(gs.new_subplotspec((0, 3), colspan=15, rowspan=22))
 ax_analemma.set_title("Analemma")
 ax_analemma.minorticks_on()
 ax_analemma.grid(which='major', linestyle='-', linewidth=0.5, color='grey')
