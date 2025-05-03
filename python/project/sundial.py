@@ -8,16 +8,6 @@ mark the perihelion and aphelion with a simple earth icon
 note: 4ft/(tan24)=9ft and 4ft/(tan71)=1.4ft so the sundial is about 7.6ft tall and 3ft wide(at widest point). There can be 9 inches or so of space for the height of the sundial past the analemma itself, then 6 inches extra for the wides part of the analemma, making the entire sundial about 10ft tall and 4ft wide.
 
 My goal in this project is to create a sundial based on the analemma of the sun's position in the sky to cast a shadow from the analemma.
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-
-if  __name__ == "__main__":
-  azimuths = np.linspace(0, 2*np.pi, 100)
-  alitudes = np.sin(azimuths)
-  plt.plot(azimuths, alitudes)
-  plt.show()
 """
 import eot
 import numpy as np
