@@ -2,7 +2,7 @@
 Equation of Time
 """
 from __future__ import division
-from math import pi, radians, pow, sin, asin, cos, acos, tan, atan, sqrt, degrees, floor
+from math import pi, radians, pow, sin, asin, cos
 
 def ecc_gen(e, p, peri_day, orb_per, day_nums):
   return eot_gen(e, p, 0, peri_day, orb_per, day_nums)
