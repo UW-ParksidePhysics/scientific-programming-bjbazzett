@@ -49,7 +49,7 @@ analemma_ann_list = []
 
 for d, dt_lbl in cal_dict.items():
     ann = ax_analemma.annotate(dt_lbl, (min_x[d - 1], dec_y[d - 1]), textcoords="offset points",
-                               xytext=(-40, -3), ha='center', fontsize='small', color='blue',
+                               xytext=(-155, -2.5), ha='center', fontsize='small', color='blue',
                                arrowprops=dict(arrowstyle="-", color='black'))
     analemma_ann_list.append(ann)
 
@@ -60,7 +60,7 @@ for d, dt_lbl in cal_dict1.items():
     analemma_ann_list.append(ann)
 for d, dt_lbl in cal_dict2.items():
     ann = ax_analemma.annotate(dt_lbl, (min_x[d - 1], dec_y[d - 1]), textcoords="offset points",
-                               xytext=(40, -3), ha='center', fontsize='small', color='blue',
+                               xytext=(155, -2.5), ha='center', fontsize='small', color='blue',
                                arrowprops=dict(arrowstyle="-", color='black'))
     analemma_ann_list.append(ann)
 
