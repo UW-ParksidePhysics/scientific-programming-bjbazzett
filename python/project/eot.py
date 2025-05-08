@@ -2,7 +2,7 @@
 Equation of Time
 """
 from __future__ import division
-from math import pi, radians, pow, sin, asin, cos, acos, tan, atan, sqrt, degrees, floor
+from math import pi, radians, pow, sin, asin, cos
 
 def ecc_gen(e, p, peri_day, orb_per, day_nums):
   return eot_gen(e, p, 0, peri_day, orb_per, day_nums)
@@ -27,11 +27,11 @@ def eot_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums):
   tan6_1_3 = (1/3)*pow(tan2, 3)
   for d in day_nums:
     m = 2 * pi * ((d - peri_day) / orb_per)
-    eot_mins.append(-(tan2_1_4e2 * sin(2 * (m + p)) + e2 * sin(m) -
+    eot_mins.append(((-(tan2_1_4e2 * sin(2 * (m + p)) + e2 * sin(m) -
                       tan2_2e * sin(m + 2 * p) + tan2_2e * sin(3 * m + 2 * p) +
                       tan4_1_2 * sin(4 * (m + p)) + e2_5_4 * sin(2 * m) - tan4_2e * sin((3 * m) + (4 * p)) +
                       tan4_2e * sin((5 * m) + (4 * p)) + tan2_2e_13_4 * sin(4 * m + 2 * p) +
-                      tan6_1_3 * sin(6 * (m + p))) * time_mins)
+                      tan6_1_3 * sin(6 * (m + p))) * time_mins) * 1.1675675675) + 16.75)
   return eot_mins
 
 
@@ -45,9 +45,9 @@ def dec_gen(e, axis_norm_degs, orb_per, day_nums, p_degs):
 
   for d in day_nums:
       d_offset = d - 1
-      dec_degs.append(-(asin(sin_axis_norm *
+      dec_degs.append(((-(asin(sin_axis_norm *
                              cos(radians(ratio360*(d_offset+(days_btw_peri_solst-2)) +
-                                 ratio_pi_e*sin(radians(ratio360*(d_offset-2))))))*360/(2*pi)))
+                                 ratio_pi_e*sin(radians(ratio360*(d_offset-2))))))*360/(2*pi))) * 1.936) + 45.5)
   return dec_degs
 
 def analemma_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums):

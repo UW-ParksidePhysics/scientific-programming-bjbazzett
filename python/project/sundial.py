@@ -8,16 +8,6 @@ mark the perihelion and aphelion with a simple earth icon
 note: 4ft/(tan24)=9ft and 4ft/(tan71)=1.4ft so the sundial is about 7.6ft tall and 3ft wide(at widest point). There can be 9 inches or so of space for the height of the sundial past the analemma itself, then 6 inches extra for the wides part of the analemma, making the entire sundial about 10ft tall and 4ft wide.
 
 My goal in this project is to create a sundial based on the analemma of the sun's position in the sky to cast a shadow from the analemma.
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-
-if  __name__ == "__main__":
-  azimuths = np.linspace(0, 2*np.pi, 100)
-  alitudes = np.sin(azimuths)
-  plt.plot(azimuths, alitudes)
-  plt.show()
 """
 import eot
 import numpy as np
@@ -37,42 +27,40 @@ day_nums = np.arange(1.5, 367.5, 1)
 
 cal_dict = {1: 'January', 32: 'Febuary', 60: 'March', 91: 'April', 182: 'July', 213: 'August'}
 
-cal_dict1 = {3: 'O', 76: '☀️', 171: '☀️', 185: 'O', 266: '☀️', 355: '☀️'}
+cal_dict1 = {3: '\u2295', 76: '♈', 171: '♊', 185: '\u2295', 266: '♍', 355: '♐'}
 
 cal_dict2 = {121: 'May', 152: 'June', 244: 'September', 274: 'October', 305: 'November', 335: 'December'}
 
 scaling_on = True
 
 fig = plt.figure(figsize=(10, 6), num='Equation of Time')
-plt.subplots_adjust(top=.925, left=0.100, right=.950, wspace=0.1)
 gs = GridSpec(22, 20, figure=fig)
 
-day_nums = np.arange(1.5, 367.5, 1)
 min_x, dec_y = eot.analemma_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
-ax_analemma = plt.subplot(gs.new_subplotspec((0, 12), colspan=9, rowspan=22))
+ax_analemma = plt.subplot(gs.new_subplotspec((0, 3), colspan=15, rowspan=22))
 ax_analemma.set_title("Analemma")
 ax_analemma.minorticks_on()
 ax_analemma.grid(which='major', linestyle='-', linewidth=0.5, color='grey')
 ax_analemma.grid(which='minor', linestyle=':', linewidth=0.5, color='grey')
-ax_analemma.set_xlabel('Minutes')
-ax_analemma.set_ylabel('Angle')
+ax_analemma.set_xlabel('Inches')
+ax_analemma.set_ylabel('Inches')
 analemma_line, = ax_analemma.plot(min_x, dec_y, 'k', lw=2)
 analemma_ann_list = []
 
 for d, dt_lbl in cal_dict.items():
     ann = ax_analemma.annotate(dt_lbl, (min_x[d - 1], dec_y[d - 1]), textcoords="offset points",
-                               xytext=(-40, 0), ha='center', fontsize='small', color='blue',
+                               xytext=(-155, -2.5), ha='center', fontsize='small', color='blue',
                                arrowprops=dict(arrowstyle="-", color='black'))
     analemma_ann_list.append(ann)
 
 for d, dt_lbl in cal_dict1.items():
     ann = ax_analemma.annotate(dt_lbl, (min_x[d - 1], dec_y[d - 1]), textcoords="offset points",
-                               xytext=(0, 20), ha='center', fontsize='small', color='red',
+                               xytext=(0, -10), ha='center', fontsize='30', color='red',
                                arrowprops=dict(arrowstyle="-", color='black'))
     analemma_ann_list.append(ann)
 for d, dt_lbl in cal_dict2.items():
     ann = ax_analemma.annotate(dt_lbl, (min_x[d - 1], dec_y[d - 1]), textcoords="offset points",
-                               xytext=(40, 0), ha='center', fontsize='small', color='blue',
+                               xytext=(155, -2.5), ha='center', fontsize='small', color='blue',
                                arrowprops=dict(arrowstyle="-", color='black'))
     analemma_ann_list.append(ann)
 
