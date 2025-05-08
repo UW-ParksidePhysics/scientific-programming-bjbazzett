@@ -25,7 +25,7 @@ axis_norm_degs = 23.5
 
 day_nums = np.arange(1.5, 367.5, 1)
 
-cal_dict = {1: 'January', 32: 'Febuary', 60: 'March', 91: 'April', 182: 'July', 213: 'August'}
+cal_dict = {1: 'January', 32: 'February', 60: 'March', 91: 'April', 182: 'July', 213: 'August'}
 
 cal_dict1 = {3: '\u2295', 76: '♈', 171: '♊', 185: '\u2295', 266: '♍', 355: '♐'}
 
