@@ -1,11 +1,10 @@
 """
 Equation of Time
 """
-from __future__ import division
 from math import pi, radians, pow, sin, asin, cos
 
-def ecc_gen(e, p, peri_day, orb_per, day_nums):
-  return eot_gen(e, p, 0, peri_day, orb_per, day_nums)
+def ecc_gen(eccentricity, p, peri_day, orb_per, day_nums):
+  return eot_gen(eccentricity, p, 0, peri_day, orb_per, day_nums)
 
 def obl_gen(p, axis_norm_rads, peri_day, orb_per, day_nums):
   return eot_gen(0, p, axis_norm_rads, peri_day, orb_per, day_nums)
@@ -36,11 +35,11 @@ def eot_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums):
 
 
 
-def dec_gen(e, axis_norm_degs, orb_per, day_nums, p_degs):
+def dec_gen(eccentricity, axis_norm_degs, orb_per, day_nums, p_degs):
   dec_degs = []
   sin_axis_norm = sin(radians(axis_norm_degs))
   ratio360 = 360 / orb_per
-  ratio_pi_e = (360 / pi) * e
+  ratio_pi_e = (360 / pi) * eccentricity
   days_btw_peri_solst = p_degs / ratio360
 
   for d in day_nums:
@@ -50,7 +49,7 @@ def dec_gen(e, axis_norm_degs, orb_per, day_nums, p_degs):
                                  ratio_pi_e*sin(radians(ratio360*(d_offset-2))))))*360/(2*pi))) * 1.936) + 45.5)
   return dec_degs
 
-def analemma_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums):
-  dec_degs = dec_gen(e, axis_norm_degs, orb_per, day_nums, p_degs)
-  eot_mins = eot_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
+def analemma_gen(eccentricity, p_degs, axis_norm_degs, peri_day, orb_per, day_nums):
+  dec_degs = dec_gen(eccentricity, axis_norm_degs, orb_per, day_nums, p_degs)
+  eot_mins = eot_gen(eccentricity, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
   return eot_mins, dec_degs

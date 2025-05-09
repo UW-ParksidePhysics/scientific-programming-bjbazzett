@@ -21,7 +21,7 @@ perihelion_date = 5
 perihelion_degs = 14
 
 
-axis_norm_degs = 23.5
+axis_variation = 23.5
 
 day = np.arange(1.5, 367.5, 1)
 
@@ -36,7 +36,7 @@ scaling_on = True
 fig = plt.figure(figsize=(10, 6), num='Equation of Time')
 gs = GridSpec(20, 20, figure=fig)
 
-min_x, dec_y = eot.analemma_gen(eccentricity, perihelion_degs, axis_norm_degs, perihelion_date, rotation_period, day)
+min_x, dec_y = eot.analemma_gen(eccentricity, perihelion_degs, axis_variation, perihelion_date, rotation_period, day)
 ax_analemma = plt.subplot(gs.new_subplotspec((0, 3), colspan=15, rowspan=22))
 ax_analemma.set_title("Analemma")
 ax_analemma.minorticks_on()
@@ -68,7 +68,7 @@ def update(val):
     global eot_ann_list, analemma_ann_list
 
     days = np.arange(1.5, 367.5, 1)
-    min_x, dec_y = eot.analemma_gen(eccentricity, day, axis_norm_degs, perihelion_date, rotation_period, days)
+    min_x, dec_y = eot.analemma_gen(eccentricity, day, axis_variation, perihelion_date, rotation_period, days)
     analemma_line.set_ydata(dec_y)
     analemma_line.set_xdata(min_x)
 
