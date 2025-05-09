@@ -1,1 +1,22 @@
 
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ vi text.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ vi test.py
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cat test.py
+def my_function():
+        print("I Hope I Did This Right")
+        output = 20*5
+        print(f"The result is {output}")
+
+if __name__ == '__main__':
+        my_function()
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ python3 test.py
+I Hope I Did This Right
+The result is 100
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~

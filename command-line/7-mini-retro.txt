@@ -1,17 +1,18 @@
-Partner:
+Partner: https://www.youtube.com/watch?v=mV2075vV_Dw
 
 What Went Well
 ---
-
+The quickness of the commands
 
 What Would Make Next Time 1% Better
 ---
 * Focus:
-
+Getting distracted while trying to find solutions for gitbash errors
 * Communication:
-
+Excellent with myself.
 * Pacing:
-
+Swift
 * Division of responsibility
-
+All me, baby
 * Code quality:
+Messy once it got to the google.com kill command prompts, and finding the PIDs and killing via those commands

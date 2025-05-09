@@ -1,17 +1,19 @@
-Partner:
+Partner: https://www.youtube.com/watch?v=mV2075vV_Dw
 
 What Went Well
 ---
-
+The understanding of the commands
 
 What Would Make Next Time 1% Better
 ---
 * Focus:
-
+Getting confused with other commands I forgot
 * Communication:
-
+The sounds of silence, ft Simon & Garfunkel
 * Pacing:
-
+Slow pacing, but once I understood the errors I made it went faster
 * Division of responsibility
-
+All me, baby
 * Code quality:
+Quite good, no messy bits of script this time. 
+My gitbash did crash after the first attempt to find files with 'import numpy' but went smooth after that.

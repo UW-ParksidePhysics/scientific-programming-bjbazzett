@@ -1,1 +1,210 @@
 
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1272       1    1272      13244  ?         197609 15:55:13 /usr/bin/mintty
+     1273    1272    1273      13692  pty0      197609 15:55:13 /usr/bin/bash
+     1295    1273    1295      10356  pty0      197609 16:00:00 /usr/bin/ps
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ vi sample.txt
+Vim: Caught deadly signal TERM
+Vim: Finished.
+
+
+
+         The above is the first terminal for the practice portion
+
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1272       1    1272      13244  ?         197609 15:55:13 /usr/bin/mintty
+     1300       1    1300      16592  ?         197609 16:00:44 /usr/bin/mintty
+     1273    1272    1273      13692  pty0      197609 15:55:13 /usr/bin/bash
+     1323    1301    1323      11732  pty1      197609 16:00:51 /usr/bin/ps
+     1301    1300    1301      15528  pty1      197609 16:00:44 /usr/bin/bash
+     1299    1273    1299      18088  pty0      197609 16:00:38 /usr/bin/vim
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ kill 1299
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ sleep 100 &
+[1] 1333
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ jobs
+[1]+  Running                 sleep 100 &
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ fg
+sleep 100
+
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1272       1    1272      13244  ?         197609 15:55:13 /usr/bin/mintty
+     1300       1    1300      16592  ?         197609 16:00:44 /usr/bin/mintty
+     1273    1272    1273      13692  pty0      197609 15:55:13 /usr/bin/bash
+     1323    1301    1323      11732  pty1      197609 16:00:51 /usr/bin/ps
+     1301    1300    1301      15528  pty1      197609 16:00:44 /usr/bin/bash
+     1299    1273    1299      18088  pty0      197609 16:00:38 /usr/bin/vim
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ kill 1299
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ sleep 100 &
+[1] 1333
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ jobs
+[1]+  Running                 sleep 100 &
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ fg
+sleep 100
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ping google.com &
+[1] 1343
+
+Pinging google.com [172.217.1.110] with 32 bytes of data:
+Reply from 172.217.1.110: bytes=32 time=15ms TTL=116
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ Reply from 172.217.1.110: bytes=32 time=17ms TTL=116
+Reply from 172.217.1.110: bytes=32 time=24ms TTL=116
+Reply from 172.217.1.110: bytes=32 time=16ms TTL=116
+
+Ping statistics for 172.217.1.110:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 15ms, Maximum = 24ms, Average = 18ms
+ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1272       1    1272      13244  ?         197609 15:55:13 /usr/bin/mintty
+     1300       1    1300      16592  ?         197609 16:00:44 /usr/bin/mintty
+     1347    1301    1347      13904  pty1      197609 16:05:54 /usr/bin/ps
+     1273    1272    1273      13692  pty0      197609 15:55:13 /usr/bin/bash
+     1301    1300    1301      15528  pty1      197609 16:00:44 /usr/bin/bash
+[1]+  Done                    ping google.com
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ping google.com &
+[1] 1351
+
+Pinging google.com [172.217.1.110] with 32 bytes of data:
+Reply from 172.217.1.110: bytes=32 time=16ms TTL=116
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ psReply from 172.217.1.110: bytes=32 time=16ms TTL=116
+
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1355    1301    1355        628  pty1      197609 16:06:12 /usr/bin/ps
+     1351    1301    1351      16356  pty1      197609 16:06:10 /c/Windows/system32/ping
+     1272       1    1272      13244  ?         197609 15:55:13 /usr/bin/mintty
+     1300       1    1300      16592  ?         197609 16:00:44 /usr/bin/mintty
+     1273    1272    1273      13692  pty0      197609 15:55:13 /usr/bin/bash
+     1301    1300    1301      15528  pty1      197609 16:00:44 /usr/bin/bash
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ Reply from 172.217.1.110: bytes=32 time=17ms TTL=116
+Reply from 172.217.1.110: bytes=32 time=16ms TTL=116
+
+Ping statistics for 172.217.1.110:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 16ms, Maximum = 17ms, Average = 16ms
+pins
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1272       1    1272      13244  ?         197609 15:55:13 /usr/bin/mintty
+     1300       1    1300      16592  ?         197609 16:00:44 /usr/bin/mintty
+     1273    1272    1273      13692  pty0      197609 15:55:13 /usr/bin/bash
+     1359    1301    1359      13948  pty1      197609 16:06:19 /usr/bin/ps
+     1301    1300    1301      15528  pty1      197609 16:00:44 /usr/bin/bash
+[1]+  Done                    ping google.com
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ kill 13408
+bash: kill: (13408) - No such process
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ kill 1636
+bash: kill: (1636) - No such process
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1369    1301    1369      15144  pty1      197609 16:09:49 /usr/bin/ps
+     1272       1    1272      13244  ?         197609 15:55:13 /usr/bin/mintty
+     1300       1    1300      16592  ?         197609 16:00:44 /usr/bin/mintty
+     1273    1272    1273      13692  pty0      197609 15:55:13 /usr/bin/bash
+     1301    1300    1301      15528  pty1      197609 16:00:44 /usr/bin/bash
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ping google.com &
+[1] 1373
+
+Pinging google.com [142.250.191.206] with 32 bytes of data:
+Reply from 142.250.191.206: bytes=32 time=15ms TTL=116
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ psReply from 142.250.191.206: bytes=32 time=15ms TTL=116
+
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1377    1301    1377       6792  pty1      197609 16:10:00 /usr/bin/ps
+     1272       1    1272      13244  ?         197609 15:55:13 /usr/bin/mintty
+     1300       1    1300      16592  ?         197609 16:00:44 /usr/bin/mintty
+     1373    1301    1373       1836  pty1      197609 16:09:58 /c/Windows/system32/ping
+     1273    1272    1273      13692  pty0      197609 15:55:13 /usr/bin/bash
+     1301    1300    1301      15528  pty1      197609 16:00:44 /usr/bin/bash
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ Reply from 142.250.191.206: bytes=32 time=17ms TTL=116
+Reply from 142.250.191.206: bytes=32 time=15ms TTL=116
+
+Ping statistics for 142.250.191.206:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 15ms, Maximum = 17ms, Average = 15ms
+ps
+      PID    PPID    PGID     WINPID   TTY         UID    STIME COMMAND
+     1272       1    1272      13244  ?         197609 15:55:13 /usr/bin/mintty
+     1300       1    1300      16592  ?         197609 16:00:44 /usr/bin/mintty
+     1273    1272    1273      13692  pty0      197609 15:55:13 /usr/bin/bash
+     1381    1301    1381       8152  pty1      197609 16:10:04 /usr/bin/ps
+     1301    1300    1301      15528  pty1      197609 16:00:44 /usr/bin/bash
+[1]+  Done                    ping google.com
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ kill google
+bash: kill: google: arguments must be process or job IDs
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ kill 4320
+bash: kill: (4320) - No such process
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ kill 6060
+bash: kill: (6060) - No such process
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ top
+bash: top: command not found
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ top
+bash: top: command not found
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ kill 1804
+bash: kill: (1804) - No such process
+
+
+
+Addendum: I looked up the PID numbers via task manager, since it wouldn't work with gitbash,
+and even though I had the correct PIDs I could not kill them.
+

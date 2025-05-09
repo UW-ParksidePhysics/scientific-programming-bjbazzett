@@ -1,1 +1,68 @@
 
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ touch greeting.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ vi greeting.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cat greeting.txt
+echo "Welcome to lesson 8!" > greeting.txt
+echo "Let's learn about redirection." >> greeting.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ rm greeting.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ echo "File 1" > list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ echo "File 2" >> list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ rm list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ touch greeting.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ vi greeting.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cat greeting.txt
+echo "Welcome to lesson 8!" > greeting.txt
+echo "Let's learn about redirection." >> greeting.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ rm greeting.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ echo "File 1" > list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ echo "File 2" >> list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ rm list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ echo "^[[200~Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru^?" > data.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ wc -w data.txt > word_count.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cat word_count.txt
+69 data.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ls > directory_list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ date >> directory_list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ rm data.txt word_count.txt directory_list.txt
+
+
+

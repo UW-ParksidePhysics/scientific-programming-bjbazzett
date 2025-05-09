@@ -1,1 +1,93 @@
 
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cd PycharmProjects
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects
+$ ls
+Bazzett-Ben/   PythonProject/                     untitled/
+Bazzett-Ben1/  scientific-programming-bjbazzett/
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects
+$ cd scientific-programming-bjbazzett
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ ls
+GitHubLoginToken.rtf  command-line/   python/
+README.md             pyproject.toml  uv.lock
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ cd command-line
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ cp 3-files.txt backup_files.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ mv backup_files.txt renamed_files.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ rm renamed_files.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ ls
+1-CONCEPTS.md       3-CONCEPTS.md      5-permissions.txt  8-mini-retro.txt
+1-introduction.txt  3-files.txt        6-CONCEPTS.md      8-redirection.txt
+1-mini-retro.txt    3-mini-retro.txt   6-mini-retro.txt   9-CONCEPTS.md
+10-CONCEPTS.md      4-CONCEPTS.md      6-searching.txt    9-mini-retro.txt
+10-mini-retro.txt   4-directories.txt  7-CONCEPTS.md      9-vi.txt
+2-CONCEPTS.md       4-mini-retro.txt   7-mini-retro.txt
+2-editing.txt       5-CONCEPTS.md      7-processes.txt
+2-mini-retro.txt    5-mini-retro.txt   8-CONCEPTS.md
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ mkdir practice_directory
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ ls
+1-CONCEPTS.md       3-CONCEPTS.md      5-permissions.txt  8-mini-retro.txt
+1-introduction.txt  3-files.txt        6-CONCEPTS.md      8-redirection.txt
+1-mini-retro.txt    3-mini-retro.txt   6-mini-retro.txt   9-CONCEPTS.md
+10-CONCEPTS.md      4-CONCEPTS.md      6-searching.txt    9-mini-retro.txt
+10-mini-retro.txt   4-directories.txt  7-CONCEPTS.md      9-vi.txt
+2-CONCEPTS.md       4-mini-retro.txt   7-mini-retro.txt   practice_directory/
+2-editing.txt       5-CONCEPTS.md      7-processes.txt
+2-mini-retro.txt    5-mini-retro.txt   8-CONCEPTS.md
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ touch shopping_list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ ls
+1-CONCEPTS.md       3-CONCEPTS.md      5-permissions.txt  8-mini-retro.txt
+1-introduction.txt  3-files.txt        6-CONCEPTS.md      8-redirection.txt
+1-mini-retro.txt    3-mini-retro.txt   6-mini-retro.txt   9-CONCEPTS.md
+10-CONCEPTS.md      4-CONCEPTS.md      6-searching.txt    9-mini-retro.txt
+10-mini-retro.txt   4-directories.txt  7-CONCEPTS.md      9-vi.txt
+2-CONCEPTS.md       4-mini-retro.txt   7-mini-retro.txt   practice_directory/
+2-editing.txt       5-CONCEPTS.md      7-processes.txt    shopping_list.txt
+2-mini-retro.txt    5-mini-retro.txt   8-CONCEPTS.md
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ mv shopping_list.txt practice_directory/
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ ls -R practice_directory
+practice_directory:
+shopping_list.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ rm -r practice_directory
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$ ls
+1-CONCEPTS.md       3-CONCEPTS.md      5-permissions.txt  8-mini-retro.txt
+1-introduction.txt  3-files.txt        6-CONCEPTS.md      8-redirection.txt
+1-mini-retro.txt    3-mini-retro.txt   6-mini-retro.txt   9-CONCEPTS.md
+10-CONCEPTS.md      4-CONCEPTS.md      6-searching.txt    9-mini-retro.txt
+10-mini-retro.txt   4-directories.txt  7-CONCEPTS.md      9-vi.txt
+2-CONCEPTS.md       4-mini-retro.txt   7-mini-retro.txt
+2-editing.txt       5-CONCEPTS.md      7-processes.txt
+2-mini-retro.txt    5-mini-retro.txt   8-CONCEPTS.md
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/command-line (main)
+$
+

@@ -1,17 +1,17 @@
-Partner:
+Partner: https://www.youtube.com/watch?v=mV2075vV_Dw
 
 What Went Well
 ---
-
+The simplicity of the commands and working from home
 
 What Would Make Next Time 1% Better
 ---
-* Focus:
+* Focus: Not getting lost in the details of the sub commands
 
-* Communication:
+* Communication: The echoing voices in my head
 
-* Pacing:
+* Pacing: Getting distracted by my dog
 
-* Division of responsibility
+* Division of responsibility: All me, baby
 
-* Code quality:
+* Code quality: Sloppy, as I misread the instuctions

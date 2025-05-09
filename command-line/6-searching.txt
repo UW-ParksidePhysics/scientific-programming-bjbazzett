@@ -1,1 +1,201 @@
 
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cd Documents
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ cd PycharmProjects
+bash: cd: PycharmProjects: No such file or directory
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ cd ~
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cd PycharmProjects
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects
+$ cd scientific-programming-bjbazzett
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ find . -name "ball.py"
+./python/vpython/ball.py
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ cd python
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ cd vpython
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python/vpython (main)
+$ grep "vpython" ball.py
+import vpython as vp
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python/vpython (main)
+$ cd ..
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ cd ..
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ find . -mtime -3
+./.git
+./.git/COMMIT_EDITMSG
+./.git/FETCH_HEAD
+./.git/index
+./.git/logs/HEAD
+./.git/logs/refs/heads/main
+./.git/logs/refs/remotes/origin/main
+./.git/objects
+./.git/objects/01
+./.git/objects/01/54e07267350374d3465529b993e572d6629fe8
+./.git/objects/0e
+./.git/objects/0e/053848132cd42a223ffe35e44c3ac6188a0c2e
+./.git/objects/11
+./.git/objects/11/b7f8384a99b9ed06eb72c700152343c558346b
+./.git/objects/13
+./.git/objects/13/01389b9a2856c91b54bbfa09ab0a1516dc3873
+./.git/objects/1c
+./.git/objects/1c/2ee2f230f913cba343ca2606be6796441a9f04
+./.git/objects/24
+./.git/objects/24/b6070e45e32a650331f47f0a905e5b02d10794
+./.git/objects/2a
+./.git/objects/2a/6eac19f81802c3ededc9064e220cc7f7f837a9
+./.git/objects/31
+./.git/objects/31/04cbd8b432e441ff7d9084142444edd560726d
+./.git/objects/3c
+./.git/objects/3c/08b8f81c3ec2a270cb4a8b5ee17f11b7dc6243
+./.git/objects/3d
+./.git/objects/3d/e28d05630ac604c99ea64aceda97925e3f788f
+./.git/objects/41
+./.git/objects/41/58b49a07dc9fd926dd61bf69dd06f7006fb8c0
+./.git/objects/43
+./.git/objects/43/0edc1b5852ea0eedd39c0d918d67297d58e685
+./.git/objects/43/8717cc254285814a5d7ea34f84d2b0e94a1fdc
+./.git/objects/4c
+./.git/objects/4c/22f7dec8616346f9e423a75af45d279d071d8b
+./.git/objects/4c/d03173a87024aee64f2a7c5812b0d025ed336d
+./.git/objects/51
+./.git/objects/51/46f855e7e571cdc9fd80c9cb8bec41e98c451c
+./.git/objects/51/a7e07302aa66e3494a8d2ac6c09d664b0a09db
+./.git/objects/52
+./.git/objects/52/3b8e9e0301d57906674a17faae37a3916d67da
+./.git/objects/57
+./.git/objects/57/3f63b97d368dbc81e9becf6915dda0a2797aaf
+./.git/objects/69
+./.git/objects/69/9cbdc0fef4fd5995f7f78072c70d440bd8f354
+./.git/objects/74
+./.git/objects/74/74609995b102c80192c096bbdb68dac870f5ce
+./.git/objects/77
+./.git/objects/77/ffe8c25db851f4131d0bb2805287a95354dd1b
+./.git/objects/78
+./.git/objects/78/cce4467fa98dbffdbb7a711954cc3f71f7b53d
+./.git/objects/79
+./.git/objects/79/4106e5810a90365e6d70b7ff97aecf43d8a4c1
+./.git/objects/7d
+./.git/objects/7d/d944cf506c168d1813b6883063a7ad048aa9c6
+./.git/objects/84
+./.git/objects/84/d1aef8412e29eacb938a3a0c4cae6a68abfb90
+./.git/objects/89
+./.git/objects/89/66b869c411214cb969844af4ccac280f58d53e
+./.git/objects/90
+./.git/objects/90/0372517510a430e6fcf655d109a6425f784844
+./.git/objects/92
+./.git/objects/92/146ebae2297040142e592e65e71e6ca98b2611
+./.git/objects/92/ebbbf5a21696007736f165736a0ca1bb9220e2
+./.git/objects/95
+./.git/objects/95/b22e65ae4b7467b784c2a5d2342dba4c504e16
+./.git/objects/95/cdb525de0967b753d9ccc99a9d187e1b392e63
+./.git/objects/96
+./.git/objects/96/8c7d7cbb438d8860ce411d1cd5bae218b518ec
+./.git/objects/96/cfbf7dff4e73c179a88658cd24b98696da08ac
+./.git/objects/a2
+./.git/objects/a2/1e79715dc2840851347e3ee1eb7bb590ac90d2
+./.git/objects/a9
+./.git/objects/a9/9c243a052a86a138b55f781f20e544cda8eee4
+./.git/objects/aa
+./.git/objects/aa/28df9886662f82560cac5f5102f931051df7d3
+./.git/objects/b4
+./.git/objects/b4/2806dd6318edf8a72fc290c61dec03138d83be
+./.git/objects/ed
+./.git/objects/ed/69283c64b349794613f860bdf713beff80e374
+./.git/objects/ef
+./.git/objects/ef/845eabe505ff564abe74589afceddea77af202
+./.git/objects/f2
+./.git/objects/f2/dda71fdf8d88bf7fba05f82a62b74fa27a2089
+./.git/objects/f4
+./.git/objects/f4/6b4ce43b926faefcb44254164a78dcaca099b6
+./.git/objects/fa
+./.git/objects/fa/3bf7c2a1c20a482da3973165ad609163deafb7
+./.git/objects/fb
+./.git/objects/fb/c9d38a1bf69c9cb57db11ce1d69177eba3e613
+./.git/ORIG_HEAD
+./.git/refs/heads
+./.git/refs/heads/main
+./.git/refs/remotes/origin
+./.git/refs/remotes/origin/main
+./.idea
+./.idea/misc.xml
+./.idea/vcs.xml
+./.idea/workspace.xml
+./command-line
+./command-line/1-CONCEPTS.md
+./command-line/1-introduction.txt
+./command-line/1-mini-retro.txt
+./command-line/2-CONCEPTS.md
+./command-line/2-editing.txt
+./command-line/2-mini-retro.txt
+./command-line/3-CONCEPTS.md
+./command-line/3-files.txt
+./command-line/3-mini-retro.txt
+./command-line/4-CONCEPTS.md
+./command-line/4-directories.txt
+./command-line/4-mini-retro.txt
+./command-line/5-CONCEPTS.md
+./command-line/5-mini-retro.txt
+./command-line/5-permissions.txt
+./python/project
+./python/project/eot.py
+./python/project/sundial.py
+./python/project/TODO.md
+./python/project/__pycache__
+./python/project/__pycache__/eot.cpython-313.pyc
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ cd python
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ touch test1.py
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ touch test2.py
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ vi test1.py
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ vi test2.py
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ grep "import numpy" *.py
+python_practice.py:import numpy as np
+test1.py:import numpy as np
+test2.py:import numpy as np
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ find . -name "*.py" | xargs grep "import numpy"
+./project/sundial.py:import numpy as np
+./python_practice.py:import numpy as np
+./test1.py:import numpy as np
+./test2.py:import numpy as np
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ rm test1.py
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$ rm test2.py
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett/python (main)
+$
+
+
+
+

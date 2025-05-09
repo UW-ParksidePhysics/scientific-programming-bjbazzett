@@ -1,1 +1,184 @@
 
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ pwd
+/c/Users/Ben
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ls
+ -1.14-windows.xml
+'3D Objects'/
+ AMDRM_Install.log
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{577be483-22d3-11eb-bd99-dfe099dabd1d}.TM.blf
+ NTUSER.DAT{577be483-22d3-11eb-bd99-dfe099dabd1d}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{577be483-22d3-11eb-bd99-dfe099dabd1d}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+ Pictures/
+ PrintHood@
+ PycharmProjects/
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ ansel/
+ jagex_cl_oldschool_LIVE.dat
+ jagexappletviewer.preferences
+ jagexcache/
+ jcef_15040.log
+ jcef_16248.log
+ jcef_1804.log
+ jcef_18164.log
+ jcef_5872.log
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ random.dat
+ scenarios/
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cd Downloads
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Downloads
+$ pwd
+/c/Users/Ben/Downloads
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Downloads
+$ cd ..
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ pwd
+/c/Users/Ben
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ^C
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cd/Users/Ben/PycharmProjects/scientific-programming-bjbazzett
+bash: cd/Users/Ben/PycharmProjects/scientific-programming-bjbazzett: No such file or directory
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ ls
+ -1.14-windows.xml
+'3D Objects'/
+ AMDRM_Install.log
+ AppData/
+'Application Data'@
+ Contacts/
+ Cookies@
+ Desktop/
+ Documents/
+ Downloads/
+ Favorites/
+ Links/
+'Local Settings'@
+ MicrosoftEdgeBackups/
+ Music/
+'My Documents'@
+ NTUSER.DAT
+ NTUSER.DAT{577be483-22d3-11eb-bd99-dfe099dabd1d}.TM.blf
+ NTUSER.DAT{577be483-22d3-11eb-bd99-dfe099dabd1d}.TMContainer00000000000000000001.regtrans-ms
+ NTUSER.DAT{577be483-22d3-11eb-bd99-dfe099dabd1d}.TMContainer00000000000000000002.regtrans-ms
+ NetHood@
+ OneDrive/
+ Pictures/
+ PrintHood@
+ PycharmProjects/
+ Recent@
+'Saved Games'/
+ Searches/
+ SendTo@
+'Start Menu'@
+ Templates@
+ Videos/
+ ansel/
+ jagex_cl_oldschool_LIVE.dat
+ jagexappletviewer.preferences
+ jagexcache/
+ jcef_15040.log
+ jcef_16248.log
+ jcef_1804.log
+ jcef_18164.log
+ jcef_5872.log
+ ntuser.dat.LOG1
+ ntuser.dat.LOG2
+ ntuser.ini
+ random.dat
+ scenarios/
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cd PycharmProjects
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects
+$ cd scientific-programming-bjbazzett
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ pwd
+/c/Users/Ben/PycharmProjects/scientific-programming-bjbazzett
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ ls
+GitHubLoginToken.rtf  command-line/   python/
+README.md             pyproject.toml  uv.lock
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ ~
+bash: /c/Users/Ben: Is a directory
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ pwd
+/c/Users/Ben/PycharmProjects/scientific-programming-bjbazzett
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/PycharmProjects/scientific-programming-bjbazzett (main)
+$ cd ~
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ pwd
+/c/Users/Ben
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$
+
+
+
+                 It said for command line 9 that I should put it here as well 
+
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ vi text.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ vi test.py
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cat test.py
+def my_function():
+        print("I Hope I Did This Right")
+        output = 20*5
+        print(f"The result is {output}")
+
+if __name__ == '__main__':
+        my_function()
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ python3 test.py
+I Hope I Did This Right
+The result is 100
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~

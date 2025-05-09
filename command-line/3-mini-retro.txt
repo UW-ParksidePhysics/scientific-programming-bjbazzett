@@ -1,17 +1,18 @@
-Partner:
+Partner: https://www.youtube.com/watch?v=mV2075vV_Dw
 
 What Went Well
 ---
-
+The swiftness of the proccess and understanding of it
 
 What Would Make Next Time 1% Better
 ---
 * Focus:
-
+Excellent outside of the odd command 'mkdir shopping_list.txt' instead of 'mkdir practice_directory'
 * Communication:
-
+Silent as the hills
 * Pacing:
-
+Fast and *mostly* accurate
 * Division of responsibility
-
+All me, baby
 * Code quality:
+Messy. I doubted that I was in the right spot several times, stopping to pwd to confirm and typing ls after each file arrangement.

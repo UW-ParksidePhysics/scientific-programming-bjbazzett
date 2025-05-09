@@ -1,17 +1,20 @@
-Partner:
+Partner: https://www.youtube.com/watch?v=mV2075vV_Dw
 
 What Went Well
 ---
-
+The overall understanding of the proccess and new commands
 
 What Would Make Next Time 1% Better
 ---
 * Focus:
-
+Focusing less on the exact commands and better understanding what I should type
 * Communication:
-
+Talking through the proccess and insulting myself less for making mistakes
 * Pacing:
-
+Working at the same speed, but reading more instructions fully before acting
 * Division of responsibility
-
+All me, baby
 * Code quality:
+Awful, absolutely horrendous. I started off by making mistakes with spelling the first directory, then having to delete it,
+as well as constantly having to check to see if I was doing it right with ls because I lacked faith in the proccess.
+Then with ls I discovered I never actually deleted the initial practice directory so I had to add that in at the end.

@@ -1,1 +1,31 @@
-
+Last login: Tue Feb 25 11:06:42 on ttys000
+betzaidaalcaide@Betzys-MacBook-Air ~ % 
+betzaidaalcaide@Betzys-MacBook-Air ~ % touch example.txt
+betzaidaalcaide@Betzys-MacBook-Air ~ % vi example.txt
+betzaidaalcaide@Betzys-MacBook-Air ~ % cat example.txt
+"This is my first file created in the terminal."
+betzaidaalcaide@Betzys-MacBook-Air ~ % ls
+Applications				OG PAY STUD 9:11:24.pdf
+Budget planner canva 1.html		OG PAY STUF 9:4:24.pdf
+Budget planner canva 1_files		OG PAYSTUD 8:28:24.pdf
+Desktop					OG paystud 9:18:24.pdf
+Documents				Pictures
+Downloads				Public
+Ethos, Pathos, Logos.txt		PycharmProjects
+Library					UW-Park to UW-Mil Mech Eng Transfer.pdf
+Movies					example.txt
+Music					wallpaper 1.pdf
+betzaidaalcaide@Betzys-MacBook-Air ~ % cd documents
+betzaidaalcaide@Betzys-MacBook-Air documents % touch notes.txt  
+betzaidaalcaide@Betzys-MacBook-Air documents % vi
+betzaidaalcaide@Betzys-MacBook-Air documents % vi notes.txt
+betzaidaalcaide@Betzys-MacBook-Air documents % cat notes.txt
+this is my first file created in the terminal
+betzaidaalcaide@Betzys-MacBook-Air documents % touch shopping_list.txt
+betzaidaalcaide@Betzys-MacBook-Air documents % vi
+betzaidaalcaide@Betzys-MacBook-Air documents % i
+zsh: command not found: i
+betzaidaalcaide@Betzys-MacBook-Air documents % vi shopping_list.txt
+betzaidaalcaide@Betzys-MacBook-Air documents % cat shopping_list.txt
+apples, bread, milk, coffee
+betzaidaalcaide@Betzys-MacBook-Air documents % 

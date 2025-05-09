@@ -1,2 +1,4 @@
 # Concepts
-* 
+* prompt
+* directory
+* shell

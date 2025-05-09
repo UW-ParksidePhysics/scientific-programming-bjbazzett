@@ -2,16 +2,18 @@ Partner:
 
 What Went Well
 ---
-
+The overall start and understanding of concepts
 
 What Would Make Next Time 1% Better
 ---
 * Focus:
-
+Not getting distracted with minor errors, such as chmod not working initially
 * Communication:
-
+Not silently judging myself
 * Pacing:
-
+Working less in spurts, and more in a slow and methodical pace
 * Division of responsibility
-
+All me, baby
 * Code quality:
+Still needs to be improved. I edited some of the lines out because I went down a rabbit hole of asking gitbash for 'help'
+when chmod didn't work properly and it would have looked REALLY messy when I copy/pasted it.

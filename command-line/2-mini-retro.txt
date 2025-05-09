@@ -1,17 +1,18 @@
-Partner:
+Partner: Betz
 
 What Went Well
----
+Great communication and clarification between both people
 
 
 What Would Make Next Time 1% Better
----
+Agreeing more effectively on which coding to us
 * Focus:
-
+We were both focused, no distractions
 * Communication:
-
+Went well but could use a little more improvement
 * Pacing:
-
+I thought that the pace we did was reasonable and at a good rate
 * Division of responsibility
-
+Work was divided equally
 * Code quality:
+We did have some help with AI but overall we made it our own code and it went well

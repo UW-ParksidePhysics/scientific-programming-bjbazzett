@@ -1,1 +1,129 @@
 
+Ben@DESKTOP-TOPJKS3 MINGW64 ~
+$ cd Documents
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ mkdir lession4-practice
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ rm -r lession4-practice
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ ls
+ 3DMark/                FromSoftware/          NBGI/
+'4A Games'/            'Fruitbat Factory'/    'Paradox Interactive'/
+ BYOND/                'Larian Studios'/      'Rockstar Games'/
+ BioWare/              'League of Legends'/   'Saved Games'/
+ BloodBowl2/            ME3TweaksModManager/  'Shadow Arena'/
+'Diablo II'/            MGR/                  'The Witcher 3'/
+ Downloads/            'My Music'@            'Warham Rp'/
+'Endless Legend'/      'My Pictures'@         'Wizards of the Coast'/
+'Endless Space 2'/     'My Videos'@            desktop.ini
+'Firaxis Live Tuner'/  'My games'/             notes.txt
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ mkdir lesson4-practice
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ ls
+ 3DMark/               'Fruitbat Factory'/     'Rockstar Games'/
+'4A Games'/            'Larian Studios'/       'Saved Games'/
+ BYOND/                'League of Legends'/    'Shadow Arena'/
+ BioWare/               ME3TweaksModManager/   'The Witcher 3'/
+ BloodBowl2/            MGR/                   'Warham Rp'/
+'Diablo II'/           'My Music'@             'Wizards of the Coast'/
+ Downloads/            'My Pictures'@           desktop.ini
+'Endless Legend'/      'My Videos'@             lesson4-practice/
+'Endless Space 2'/     'My games'/              notes.txt
+'Firaxis Live Tuner'/   NBGI/
+ FromSoftware/         'Paradox Interactive'/
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ mkdir -p lesson4-practice/data/2025
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ pwd
+/c/Users/Ben/Documents
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ ls
+ 3DMark/               'Fruitbat Factory'/     'Rockstar Games'/
+'4A Games'/            'Larian Studios'/       'Saved Games'/
+ BYOND/                'League of Legends'/    'Shadow Arena'/
+ BioWare/               ME3TweaksModManager/   'The Witcher 3'/
+ BloodBowl2/            MGR/                   'Warham Rp'/
+'Diablo II'/           'My Music'@             'Wizards of the Coast'/
+ Downloads/            'My Pictures'@           desktop.ini
+'Endless Legend'/      'My Videos'@             lesson4-practice/
+'Endless Space 2'/     'My games'/              notes.txt
+'Firaxis Live Tuner'/   NBGI/
+ FromSoftware/         'Paradox Interactive'/
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ cd lesson4-practice
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents/lesson4-practice
+$ pwd
+/c/Users/Ben/Documents/lesson4-practice
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents/lesson4-practice
+$ ls
+data/
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents/lesson4-practice
+$ ..
+bash: ..: command not found
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents/lesson4-practice
+$ cd Documents
+bash: cd: Documents: No such file or directory
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents/lesson4-practice
+$ cd ..
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ find lesson4-practice -type d
+lesson4-practice
+lesson4-practice/data
+lesson4-practice/data/2025
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ rmdir lesson4-practice/data/2025
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ mkdir projects
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ mkdir -p projects/frontend projects/backend projects/database
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ find lesson4-practice -type d
+lesson4-practice
+lesson4-practice/data
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ find projects -type d
+projects
+projects/backend
+projects/database
+projects/frontend
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ rm -r projects
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ ls
+ 3DMark/               'Fruitbat Factory'/     'Rockstar Games'/
+'4A Games'/            'Larian Studios'/       'Saved Games'/
+ BYOND/                'League of Legends'/    'Shadow Arena'/
+ BioWare/               ME3TweaksModManager/   'The Witcher 3'/
+ BloodBowl2/            MGR/                   'Warham Rp'/
+'Diablo II'/           'My Music'@             'Wizards of the Coast'/
+ Downloads/            'My Pictures'@           desktop.ini
+'Endless Legend'/      'My Videos'@             lesson4-practice/
+'Endless Space 2'/     'My games'/              notes.txt
+'Firaxis Live Tuner'/   NBGI/
+ FromSoftware/         'Paradox Interactive'/
+
+Ben@DESKTOP-TOPJKS3 MINGW64 ~/Documents
+$ rm -r lesson4-practice
