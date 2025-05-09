@@ -1,5 +1,5 @@
 """
-Equation of Time
+Equation of Time(eot)
 """
 from math import pi, radians, pow, sin, asin, cos
 

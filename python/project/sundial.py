@@ -1,13 +1,12 @@
 """
-(feedback) Sundial
-make month start marks about 12inch horizontal away from the center line and labeled with the word of the month
-set width to 3ft and use angles to set height
-mark the solstices and equinoxes with a simple sun icon
-mark the perihelion and aphelion with a simple earth icon
-
-note: 4ft/(tan24)=9ft and 4ft/(tan71)=1.4ft so the sundial is about 7.6ft tall and 3ft wide(at widest point). There can be 9 inches or so of space for the height of the sundial past the analemma itself, then 6 inches extra for the wides part of the analemma, making the entire sundial about 10ft tall and 4ft wide.
-
-My goal in this project is to create a sundial based on the analemma of the sun's position in the sky to cast a shadow from the analemma.
+My goal in this project is to design a 7.6ft x 3ft analemma on the ground that mirrors the sun's own analemma to cast a
+shadow on a series of yet-to-be-designed marker stones, the central point of which will be a midday marker stone 1.6ft
+past the most upward tip of the ground-analemma. The overall design and size of the analemma has been adjusted for a
+4ft tall individual, sized for visiting students, but also with the intent that it does not need to be 100% accurate to
+function properly, allowing visitors to approximate the day while still having their shadow roughly line up with the
+sundial. For this purpose the months have been marked alone the 'route' so that guests can approximate the date
+corresponding to their spot on the analemma. For purposes of learning the equinoxes, solstices, and ap/peri-helions have
+been marked with astronomical symbols as well.
 """
 import eot
 import numpy as np
@@ -19,7 +18,6 @@ rotation_period = 365.25
 
 perihelion_date = 5
 perihelion_degs = 14
-
 
 axis_variation = 23.5
 
@@ -73,31 +71,3 @@ def update(val):
     analemma_line.set_xdata(min_x)
 
 plt.show()
-
-#### RENAME from project.py to (your_project_short_name).py
-# File structure
-# 1. Commented paragraph describing project ~ 100-200 words
-# 2. Module imports that are used in multiple functions
-# 3. Function definitions
-# 4. if __name__ == "__main__" block, which calls a primary function with a clear name 
-
-# All code is inside function definitions for simulation solution & visualization (functional programming)
-#	Each function contains a docstring compliant with PEP 257: https://www.python.org/dev/peps/pep-0257/
-#	Module ends with if __name__ == "__main__" block to execute central function of the code
-
-# Primary simulation function structure
-#	1. Module imports
-#		Use SciPy constants for physical constants in particular function (not globally)
-#			https://docs.scipy.org/doc/scipy/reference/constants.html
-#		Follow best practice order: 
-#			https://docs.python.org/3/faq/programming.html#what-are-the-best-practices-for-using-import-in-a-module
-# 	2. Simulation parameters
-#		Each parameter named clearly and units marked in in-line comment
-#		Naming of all variables should comply with PEP 8: 
-#			https://www.python.org/dev/peps/pep-0008/#documentation-strings
-#			(lower_case_with_underscores)
-# 	3. Computed parameters (from simulation parameters)
-# 	4. Function calls (use PEP 8-compliant lower_case_with_underscores) and simple calculations for:
-#		data read-in
-#		simulation solution 
-#		visualization
