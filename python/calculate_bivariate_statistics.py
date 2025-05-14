@@ -21,15 +21,12 @@ def calculate_bivariate_statistics(data):
     max_y = np.max(y_values)
     return np.array([mean_y, std_y, min_x, max_x, min_y, max_y])
 
-def main():
+if __name__ == '__main__':
     x = np.linspace(-10, 10, 100)
     y = x ** 2
-    data = np.vstack((x, y))
-    statistics = calculate_bivariate_statistics(data)
+    data_test = np.vstack((x, y))
+    statistics = calculate_bivariate_statistics(data_test)
     labels = ['mean(y)', 'std(y)', 'min(x)', 'max(x)', 'min(y)', 'max(y)']
     print("bivariate statistics:")
     for label, value in zip(labels, statistics):
         print(f"{label}: {value:.4f}")
-
-if __name__ == '__main__':
-    main()

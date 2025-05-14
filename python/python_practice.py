@@ -1,6 +1,5 @@
 import numpy as np
 
-
 matrix_A = np.array([[1, 2], [3, 4]])
 print(f'A = {matrix_A}')
 
