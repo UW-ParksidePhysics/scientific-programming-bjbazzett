@@ -3,53 +3,79 @@ Equation of Time(eot)
 """
 from math import pi, radians, pow, sin, asin, cos
 
-def ecc_gen(eccentricity, p, peri_day, orb_per, day_nums):
-  return eot_gen(eccentricity, p, 0, peri_day, orb_per, day_nums)
+def generate_eccentricity_component(eccentricity, perihelion_longitude_deg, perihelion_day, orbital_period_days, day_numbers):
+    return generate_equation_of_time(eccentricity, perihelion_longitude_deg, 0, perihelion_day, orbital_period_days, day_numbers)
 
-def obl_gen(p, axis_norm_rads, peri_day, orb_per, day_nums):
-  return eot_gen(0, p, axis_norm_rads, peri_day, orb_per, day_nums)
+def generate_obliquity_component(perihelion_longitude_deg, axial_tilt_radians, perihelion_day, orbital_period_days, day_numbers):
+    return generate_equation_of_time(0, perihelion_longitude_deg, axial_tilt_radians, perihelion_day, orbital_period_days, day_numbers)
 
-def eot_gen(e, p_degs, axis_norm_degs, peri_day, orb_per, day_nums):
-  eot_mins = []
-  time_mins = (24 * 60) / (2 * pi)
-  p = radians(p_degs)
-  axis_norm_rads = radians(axis_norm_degs)
-  t1 = (axis_norm_rads/2)*(1-4*pow(e, 2))
-  tan2_1_4e2 = (1-cos(2*t1)) / (1+cos(2*t1))
-  tan2 = (1-cos(axis_norm_rads)) / (1+cos(axis_norm_rads))
-  e2 = 2*e
-  tan2_2e = 2*e*tan2
-  tan4_1_2 = (1/2)*pow(tan2, 2)
-  e2_5_4 = (5/4)*(pow(e, 2))
-  tan4_2e = 2*e*pow(tan2, 2)
-  tan2_2e_13_4 = (13/4)*(pow(e, 2))*tan2
-  tan6_1_3 = (1/3)*pow(tan2, 3)
-  for d in day_nums:
-    m = 2 * pi * ((d - peri_day) / orb_per)
-    eot_mins.append(((-(tan2_1_4e2 * sin(2 * (m + p)) + e2 * sin(m) -
-                      tan2_2e * sin(m + 2 * p) + tan2_2e * sin(3 * m + 2 * p) +
-                      tan4_1_2 * sin(4 * (m + p)) + e2_5_4 * sin(2 * m) - tan4_2e * sin((3 * m) + (4 * p)) +
-                      tan4_2e * sin((5 * m) + (4 * p)) + tan2_2e_13_4 * sin(4 * m + 2 * p) +
-                      tan6_1_3 * sin(6 * (m + p))) * time_mins) * 1.1675675675) + 16.75)
-  return eot_mins
+def generate_equation_of_time(eccentricity, perihelion_longitude_deg, axial_tilt_deg,
+                               perihelion_day, orbital_period_days, day_numbers):
+    equation_of_time_minutes = []
+    minutes_per_radian = (24 * 60) / (2 * pi)
 
+    perihelion_longitude_rad = radians(perihelion_longitude_deg)
+    axial_tilt_rad = radians(axial_tilt_deg)
 
+    t1 = (axial_tilt_rad / 2) * (1 - 4 * pow(eccentricity, 2))
+    tan2_half_t1 = (1 - cos(2 * t1)) / (1 + cos(2 * t1))
+    tan2_axial = (1 - cos(axial_tilt_rad)) / (1 + cos(axial_tilt_rad))
 
-def dec_gen(eccentricity, axis_norm_degs, orb_per, day_nums, p_degs):
-  dec_degs = []
-  sin_axis_norm = sin(radians(axis_norm_degs))
-  ratio360 = 360 / orb_per
-  ratio_pi_e = (360 / pi) * eccentricity
-  days_btw_peri_solst = p_degs / ratio360
+    eccentricity_times_2 = 2 * eccentricity
+    e_tan2 = 2 * eccentricity * tan2_axial
+    tan2_squared_half = 0.5 * pow(tan2_axial, 2)
+    eccentricity_squared = pow(eccentricity, 2)
+    eccentricity_squared_5_4 = (5 / 4) * eccentricity_squared
+    e_tan2_squared = 2 * eccentricity * pow(tan2_axial, 2)
+    e_squared_tan2_13_4 = (13 / 4) * eccentricity_squared * tan2_axial
+    tan2_cubed_third = (1 / 3) * pow(tan2_axial, 3)
 
-  for d in day_nums:
-      d_offset = d - 1
-      dec_degs.append(((-(asin(sin_axis_norm *
-                             cos(radians(ratio360*(d_offset+(days_btw_peri_solst-2)) +
-                                 ratio_pi_e*sin(radians(ratio360*(d_offset-2))))))*360/(2*pi))) * 1.936) + 45.5)
-  return dec_degs
+    for day in day_numbers:
+        mean_anomaly = 2 * pi * ((day - perihelion_day) / orbital_period_days)
+        equation = (
+            -(
+                tan2_half_t1 * sin(2 * (mean_anomaly + perihelion_longitude_rad))
+                + eccentricity_times_2 * sin(mean_anomaly)
+                - e_tan2 * sin(mean_anomaly + 2 * perihelion_longitude_rad)
+                + e_tan2 * sin(3 * mean_anomaly + 2 * perihelion_longitude_rad)
+                + tan2_squared_half * sin(4 * (mean_anomaly + perihelion_longitude_rad))
+                + eccentricity_squared_5_4 * sin(2 * mean_anomaly)
+                - e_tan2_squared * sin(3 * mean_anomaly + 4 * perihelion_longitude_rad)
+                + e_tan2_squared * sin(5 * mean_anomaly + 4 * perihelion_longitude_rad)
+                + e_squared_tan2_13_4 * sin(4 * mean_anomaly + 2 * perihelion_longitude_rad)
+                + tan2_cubed_third * sin(6 * (mean_anomaly + perihelion_longitude_rad))
+            ) * minutes_per_radian * 1.1675675675
+        ) + 16.75
+        equation_of_time_minutes.append(equation)
+    return equation_of_time_minutes
+#the minor adjustments at the end are to change the degrees to inches, then offset to align the widest/tallest parts of the analemma with 0 for x,y
 
-def analemma_gen(eccentricity, p_degs, axis_norm_degs, peri_day, orb_per, day_nums):
-  dec_degs = dec_gen(eccentricity, axis_norm_degs, orb_per, day_nums, p_degs)
-  eot_mins = eot_gen(eccentricity, p_degs, axis_norm_degs, peri_day, orb_per, day_nums)
-  return eot_mins, dec_degs
+def generate_declination(eccentricity, axial_tilt_deg, orbital_period_days, day_numbers, perihelion_longitude_deg):
+    declination_degrees = []
+    sin_axial_tilt = sin(radians(axial_tilt_deg))
+    deg_per_day = 360 / orbital_period_days
+    eccentricity_phase_correction = (360 / pi) * eccentricity
+    days_between_perihelion_and_solstice = perihelion_longitude_deg / deg_per_day
+
+    for day in day_numbers:
+        day_offset = day - 1
+        declination = (
+            -asin(
+                sin_axial_tilt * cos(
+                    radians(
+                        deg_per_day * (day_offset + (days_between_perihelion_and_solstice - 2))
+                        + eccentricity_phase_correction * sin(radians(deg_per_day * (day_offset - 2)))
+                    )
+                )
+            ) * 360 / (2 * pi)
+        ) * 1.936 + 45.5
+        declination_degrees.append(declination)
+    return declination_degrees
+
+def generate_analemma(eccentricity, perihelion_longitude_deg, axial_tilt_deg,
+                      perihelion_day, orbital_period_days, day_numbers):
+    declination_degrees = generate_declination(eccentricity, axial_tilt_deg, orbital_period_days,
+                                               day_numbers, perihelion_longitude_deg)
+    equation_of_time_minutes = generate_equation_of_time(eccentricity, perihelion_longitude_deg, axial_tilt_deg,
+                                                         perihelion_day, orbital_period_days, day_numbers)
+    return equation_of_time_minutes, declination_degrees
