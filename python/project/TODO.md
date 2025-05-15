@@ -8,4 +8,4 @@
 - [x] Properly scale the analemma
 - [x] Adjust month names so they rest above the lines
 - [x] Add descriptive docstrings
-- [x] REALLY REALLY making sure my variables are properly labelled
+- [x] REALLY, REALLY making sure my variables are properly labelled

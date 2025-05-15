@@ -117,7 +117,7 @@ def generate_declination(eccentricity, axial_tilt_deg, orbital_period_days, day_
     return declination_degrees
 
 """
-computes the EoT and solar declination for the year to produce the analemma, with parameters like;
+Computes the EoT and solar declination for the year to produce the analemma, with parameters like;
 (eccentricity, perihelion long/dat, obliquity, orbit period, number of days)
 return being a 2 list tuple, EoT values being x axis, and Solar declination being y axis
 """

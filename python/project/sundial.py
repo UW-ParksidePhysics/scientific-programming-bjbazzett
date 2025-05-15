@@ -76,7 +76,7 @@ def plot_analemma(equation_of_time_minutes, declination_degrees):
     return fig, ax, line
 
 """
-Main function to generate and plot the analemma.
+Main function to generate and plot the analemma
 """
 def main():
     equation_of_time_minutes, declination_degrees = eot.generate_analemma(
