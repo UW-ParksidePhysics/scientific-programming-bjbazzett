@@ -13,14 +13,11 @@ def generate_equation_of_time(eccentricity, perihelion_longitude_deg, axial_tilt
                                perihelion_day, orbital_period_days, day_numbers):
     equation_of_time_minutes = []
     minutes_per_radian = (24 * 60) / (2 * pi)
-
     perihelion_longitude_rad = radians(perihelion_longitude_deg)
     axial_tilt_rad = radians(axial_tilt_deg)
-
     t1 = (axial_tilt_rad / 2) * (1 - 4 * pow(eccentricity, 2))
     tan2_half_t1 = (1 - cos(2 * t1)) / (1 + cos(2 * t1))
     tan2_axial = (1 - cos(axial_tilt_rad)) / (1 + cos(axial_tilt_rad))
-
     eccentricity_times_2 = 2 * eccentricity
     e_tan2 = 2 * eccentricity * tan2_axial
     tan2_squared_half = 0.5 * pow(tan2_axial, 2)
