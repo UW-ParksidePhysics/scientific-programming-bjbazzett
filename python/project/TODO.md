@@ -6,6 +6,6 @@
 - [x] Make sure all variables names are words 
 - [x] Make sure there are no yellow and red squiggles in PyCharm
 - [x] Properly scale the analemma
-- [x] Adjust month names so they rest above the lines
+- [ ] Adjust month names so they rest above the lines
 - [x] Add descriptive docstrings
 - [x] REALLY, REALLY making sure my variables are properly labelled

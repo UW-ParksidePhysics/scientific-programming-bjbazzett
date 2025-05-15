@@ -57,6 +57,7 @@ def plot_analemma(equation_of_time_minutes, declination_degrees):
     ax.set_xlabel('Inches')
     ax.set_ylabel('Inches')
     ax.minorticks_on()
+    ax.set_aspect('equal', adjustable='datalim')
     ax.grid(which='major', linestyle='-', linewidth=0.5, color='grey')
     ax.grid(which='minor', linestyle=':', linewidth=0.5, color='grey')
 
@@ -66,13 +67,13 @@ def plot_analemma(equation_of_time_minutes, declination_degrees):
     # Add month and symbol annotations
     for day, label in left_months.items():
         annotate(ax, equation_of_time_minutes[day - 1], declination_degrees[day - 1],
-                 label, offset=(-155, -2.5), color='blue', fontsize='small')
+                 label, offset=(-63, -2.5), color='blue', fontsize='small')
     for day, symbol in special_symbols.items():
         annotate(ax, equation_of_time_minutes[day - 1], declination_degrees[day - 1],
                  symbol, offset=(0, -10), color='red', fontsize=30)
     for day, label in right_months.items():
         annotate(ax, equation_of_time_minutes[day - 1], declination_degrees[day - 1],
-                 label, offset=(155, -2.5), color='blue', fontsize='small')
+                 label, offset=(63, -2.5), color='blue', fontsize='small')
     return fig, ax, line
 
 """
