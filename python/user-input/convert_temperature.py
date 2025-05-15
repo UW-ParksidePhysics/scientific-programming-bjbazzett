@@ -1,24 +1,48 @@
-"""
-I could not, for the life of me, get the python shell to import the module. Used python 3.13 from the windows store,git command/bash, windows command prompt. Any online versions also failed to work.
-"""
+"""conversion equations"""
+def celsius_to_fahrenheit(c):
+    return c * 9 / 5 + 32
+def fahrenheit_to_celsius(f):
+    return (f - 32) * 5 / 9
+def celsius_to_kelvin(c):
+    return c + 273.15
+def kelvin_to_celsius(k):
+    return k - 273.15
+def fahrenheit_to_kelvin(f):
+    return celsius_to_kelvin(fahrenheit_to_celsius(f))
+def kelvin_to_fahrenheit(k):
+    return celsius_to_fahrenheit(kelvin_to_celsius(k))
 
-def fahrenheit_to_celsius(fahrenheit):
-    return (5 / 9) * (fahrenheit - 32)
+def test_conversion():
+    t = 21.3
+    f = celsius_to_fahrenheit(t)
+    k = celsius_to_kelvin(t)
+    assert abs(fahrenheit_to_celsius(f) - t) < 0.01
+    assert abs(kelvin_to_celsius(k) - t) < 0.01
+    assert abs(kelvin_to_fahrenheit(fahrenheit_to_kelvin(f)) - f) < 0.01
 
-def fahrenheit_to_kelvin(fahrenheit):
-    celsius = fahrenheit_to_celsius(fahrenheit)
-    return celsius_to_kelvin(celsius)
+def user_interface():
+    import sys
+    if len(sys.argv) != 3:
+        print("Usage: python convert_temperature.py <temperature> <scale>")
+        return
+    try:
+        t = float(sys.argv[1])
+        s = sys.argv[2].upper()
 
-def celsius_to_fahrenheit(celsius):
-    return (9 / 5) * celsius + 32
+        if s == 'C':
+            print(f"{celsius_to_fahrenheit(t):.2f} F {celsius_to_kelvin(t):.2f} K")
+        elif s == 'F':
+            print(f"{fahrenheit_to_celsius(t):.2f} C {fahrenheit_to_kelvin(t):.2f} K")
+        elif s == 'K':
+            print(f"{kelvin_to_celsius(t):.2f} C {kelvin_to_fahrenheit(t):.2f} F")
+        else:
+            print("Invalid scale. Use 'C', 'F', or 'K'.")
+    except ValueError:
+        print("Invalid temperature. Please enter a number.")
 
-def celsius_to_kelvin(celsius):
-    return celsius + 273
-
-def kelvin_to_fahrenheit(kelvin):
-    celsius = kelvin_to_celsius(kelvin)
-    return celsius_to_fahrenheit(celsius)
-
-def kelvin_to_celsius(kelvin):
-    return kelvin - 273
-
+if __name__ == '__main__':
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1].lower() == 'verify':
+        test_conversion()
+    else:
+        user_interface()
