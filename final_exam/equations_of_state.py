@@ -105,7 +105,9 @@ def birch_murnaghan(volumes, equilibrium_energy, bulk_modulus, bulk_modulus_deri
 
     :return:                        NumPy array of the Birch-Murnaghan equation of state values at input volumes
     """
-    reduced_volume_area = np.power(volumes / equilibrium_volume, -2. / 3.)
+    volume_ratio = volumes / equilibrium_volume
+    volume_ratio = np.clip(volume_ratio, 1e-6, None)
+    reduced_volume_area = np.power(volume_ratio, -2. / 3.)
     return equilibrium_energy + (9. * bulk_modulus * equilibrium_volume / 16.) * (
             np.power(reduced_volume_area - 1., 3.) * bulk_modulus_derivative +
             np.power(reduced_volume_area - 1., 2.) * (6. - 4. * reduced_volume_area))

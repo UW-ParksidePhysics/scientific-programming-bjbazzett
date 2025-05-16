@@ -53,13 +53,18 @@ def analyze(filename, display_graph=False):
     ax.set_ylabel(r'$E$ [eV/atom]')
     ax.set_title(f"Birch-Murnaghan EOS for {chem} in DFT {approx}")
 
-    annotate(ax, {
-        chem: {'position': [0.01, 0.96], 'alignment': ['left', 'top'], 'fontsize': 12},
-        symmetry: {'position': [0.01, 0.92], 'alignment': ['left', 'top'], 'fontsize': 12},
-        f"K₀ = {bulk_modulus:.1f} GPa": {'position': [0.01, 0.88], 'alignment': ['left', 'top'], 'fontsize': 12},
-        f"V₀ = {eq_vol:.2f} Å³/atom": {'position': [0.01, 0.84], 'alignment': ['left', 'top'], 'fontsize': 12},
-        f"Energy Range: {stats[4]:.2f} – {stats[5]:.2f} eV": {'position': [0.01, 0.80], 'alignment': ['left', 'top'],
-                                                              'fontsize': 12}})
+    label_text = (
+        f"{chem}\n"
+        f"{symmetry}\n"
+        f"{approx}\n"
+        f"K₀ = {bulk_modulus:.1f} GPa\n"
+        f"V₀ = {eq_vol:.2f} Å³/atom\n"
+        f"Energy Range: {stats[4]:.2f} – {stats[5]:.2f} eV"
+    )
+
+    # Add invisible dummy line to hold the label in the legend
+    ax.plot([], [], ' ', label=label_text)
+    ax.legend(loc='upper right', frameon=True)
     eos_filename = f"bazzett.{chem}.{symmetry}.{approx}.Birch-MurnaghanEOS.png"
     plt.savefig(eos_filename) if not display_graph else plt.show()
     plt.close()
