@@ -70,7 +70,7 @@ def plot_analemma(equation_of_time_minutes, declination_degrees):
                  label, offset=(-63, -2.5), color='blue', fontsize='small')
     for day, symbol in special_symbols.items():
         annotate(ax, equation_of_time_minutes[day - 1], declination_degrees[day - 1],
-                 symbol, offset=(0, -10), color='red', fontsize=30)
+                 symbol, offset=(0, -10), color='red', fontsize=25)
     for day, label in right_months.items():
         annotate(ax, equation_of_time_minutes[day - 1], declination_degrees[day - 1],
                  label, offset=(63, -2.5), color='blue', fontsize='small')
