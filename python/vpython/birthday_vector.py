@@ -22,6 +22,13 @@ xlbl=label(pos=vector(11,0,0), text="X", color=color.red, opacity=0, height=30, 
 yaxis=cylinder(color=color.green, pos=vector(0,0,0), axis=vector(0,10,0), radius=0.3)
 ylbl=label(pos=vector(0,11,0), text="Y", color=color.green, opacity=0, height=30, box=0)
 zaxis=cylinder(color=color.blue, pos=vector(0,0,0), axis=vector(0,0,10), radius=0.3)
-xlbl=label(pos=vector(0,0,11), text="Z", color=color.blue, opacity=0, height=30, box=0)
 
-r = arrow(pos=vector(0,0,0), axis = vector(2,10,7), color=color.white, shaftwidth=0.5)
+#vector comps as 4(April) 20(day of birth) 24 (sum of two)
+a = 4
+b = 20
+c = 24
+
+r = arrow(pos=vector(0, 0, 0), axis=vector(a, b, c), color= color.red, shaftwidth=1)
+
+r_label = label(pos=vector(a, b, c), text=r"r = 4x̂ + 20ŷ + 24ẑ",
+    height=20, box=0, color=color.red)

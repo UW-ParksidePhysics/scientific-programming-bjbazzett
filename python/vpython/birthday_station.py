@@ -21,6 +21,11 @@ pause = False
 rotation = 0
 drag = False
 
+my_birthday = 20
+my_birthday_plus_one = 21
+rotation_days = my_birthday if abs(my_birthday - 1) < abs(my_birthday_plus_one - 1) else my_birthday_plus_one
+omega = 2 * pi / rotation_days
+
 class spacestation:
     def __init__(self, whichcanvas):
         self.N = 50 # number of boxes used to create the ring-shaped space station
@@ -33,7 +38,7 @@ class spacestation:
         
         thick = 0.5 # thickness of space station
         dtheta = 2 * pi / self.N
-        paint = color.red
+        paint = color.cyan
         red = True
         boxes = [self.person]
         
@@ -42,10 +47,10 @@ class spacestation:
             b = box(pos=(self.R + thick / 2) * vector(cos(theta), sin(theta), 0),
                     size=vector(thick, 2 * (self.R + thick) * sin(dtheta / 2), thick))
             if red:
-              b.color = color.red
+              b.color = color.cyan
               red = False
             else:
-              b.color = color.blue
+              b.color = color.red
               red = True
             b.rotate(angle=theta, axis=vector(0, 0, 1))
             boxes.append(b)
@@ -53,7 +58,7 @@ class spacestation:
         self.hull = compound(boxes)
         
         self.ball = sphere(pos=self.person.pos + self.person.axis,
-                    color=color.cyan, size=2 * 0.2 * vector(1, 1, 1))
+                    color=color.green, size=2 * 0.2 * vector(1, 1, 1))
         
         self.trail = attach_trail(self.ball, radius=0.1 * self.ball.size.x, pps=10, retain=500)
         self.reset()
@@ -123,10 +128,10 @@ omega = 1  # angular speed of space station; period of rotation is 2*pi/omega
 deltat = 0.001 * 2 * pi / omega
 v0 = omega * (station1.R - station1.h)
 scalefactor = 5 / (omega * station1.R)
-v1 = arrow(canvas=scene1, pos=station1.ball.pos, color=color.green,
+v1 = arrow(canvas=scene1, pos=station1.ball.pos, color=color.blue,
             axis=vector(0, 0, 0), shaftwidth=0.4, visible=False)
 
-v2 = arrow(canvas=scene2, pos=station2.ball.pos, color=color.green,
+v2 = arrow(canvas=scene2, pos=station2.ball.pos, color=color.blue,
             axis=vector(0, 0, 0), shaftwidth=0.4, visible=False)
 
 instruct1 = label(canvas=scene1, pos=vector(0, station1.R / 2, 0),
